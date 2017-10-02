@@ -20,11 +20,11 @@ class Beers extends Component {
     return(
       <Card.Group>
       { this.state.beers.map( beer =>
-        <Card inverted key={beer.id}>
-          <Card.Header>
+        <Card key={beer.id}>
+          {/* <Image src={beer.images.medium} /> */}
+          <Card.Content>
             <h1>{beer.name}</h1>
-          </Card.Header>
-       
+          </Card.Content>
         </Card>
         ) 
       }

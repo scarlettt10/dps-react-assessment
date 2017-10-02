@@ -19,11 +19,14 @@ class Breweries extends Component {
   render() {
     return(
       <Card.Group>
-      { this.state.breweries.map( brewery =>
-        <Card inverted key={brewery.id}>
-          <Card.Header>
+      { this.state.breweries.map( brewery => 
+        <Card key={brewery.id}>
+        
+           
+          <Card.Content>
             <h1>{brewery.name}</h1>
-          </Card.Header>
+            <h3>{brewery.description}</h3>
+          </Card.Content>
        
         </Card>
         ) 
